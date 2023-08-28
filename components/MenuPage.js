@@ -21,7 +21,17 @@ export class MenuPage extends HTMLElement {
         const template = document.getElementById("menu-page-template")
         const content = template.content.cloneNode(true)
         this.root.appendChild(content)
+
+
+        window.addEventListener("appmenuchange", () => {
+            this.render()
+        })
     }
+
+    render() {
+        
+    }
+
 }
 
 customElements.define("menu-page",MenuPage)
